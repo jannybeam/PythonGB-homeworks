@@ -1,2 +1,2 @@
 # PythonGB-homeworks
-My name is Marina Demina fnd this is my homework for GeekBrains.
+My name is Marina Demina and this is my homework for GeekBrains.
