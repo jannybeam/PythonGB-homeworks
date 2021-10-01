@@ -1,7 +1,5 @@
-num = int(input('Enter positive integer: '))
-max = 0
-while num > 0:
-    if max < num % 10:
-        max = num % 10
-    num = num // 10
-print(f"Max integer:{max}")
+users_list = input('Words: ')
+
+words = users_list.split()
+for num, word in enumerate(words):
+    print(f'#{num} - {word[:10]}')

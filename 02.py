@@ -1,10 +1,13 @@
-sec = int(input("Enter time in seconds: "))
+fill_the_list = input('list: ')
 
-print(f"{sec // 3600:02}:{sec % 3600 // 60:02}:{sec % 60:02}")
+input_list = fill_the_list.split()
 
-if sec < 60:
-    print(f"00:00:{sec}")
-elif sec < 360:
-    print(f"00:{sec // 60}:{sec % 60}")
-else:
-    print(f"{sec // 3600:02}:{sec % 3600 // 60:02}:{sec % 60:02}")
+len_list = len(input_list)
+
+a = 0
+if len_list > 1:
+    while a < len_list - 1:
+        input_list[a], input_list[a + 1] = input_list[a + 1], input_list[a]
+        a += 2
+
+print(input_list)
