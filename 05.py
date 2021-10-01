@@ -1,12 +1,14 @@
-earnings = int(input('Proceeds: '))
-costs = int(input('Costs: '))
+rating_list = [8, 4, 3, 3, 4, 2, 5, 5, 6, 7, 1]
 
-if earnings > costs:
-    print('Profit')
-    profitability = (earnings - costs) / earnings
-    print (f'Profitability: {profitability}')
-    num_of_employees = int(input('Number of employees: '))
-    profit_per_employee = (earnings - costs) / num_of_employees
-    print(f'Profit per employee: {profit_per_employee}')
-elif earnings < costs:
-    print(f'Waste.')
+rating = int(input('Enter number: '))
+inserted = False
+for index, number in enumerate(rating_list):
+    if rating > number:
+        rating_list.insert(index, rating)
+        inserted = True
+        break
+
+if not inserted:
+    rating_list.append(rating)
+
+print(rating_list)

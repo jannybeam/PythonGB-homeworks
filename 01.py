@@ -1,23 +1,7 @@
-a = 5
-print (a)
+my_list = [22, 18.5, [1, 2, 3], {'one': 1, 'two': 2}, 'Nice Day', 12, (4, 5, 6)]
 
-b = 'Hello World!'
-print (b)
+print(my_list)
+print(type(my_list))
 
-print (7)
-print ('boom')
-
-c = int (input ('enter the number '))
-d = c + a
-print (d)
-
-i = a - c
-print (i)
-
-e = c / a
-print (e)
-
-f = c * 8
-print (f)
-
-print (c ** 3)
+for a in my_list:
+    print(type(a))
