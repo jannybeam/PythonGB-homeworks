@@ -1,14 +1,17 @@
-rating_list = [8, 4, 3, 3, 4, 2, 5, 5, 6, 7, 1]
+def num_func(num_str, stop):
+    nums = num_str.split(' ')
+    sum_list = 0
+    for i in nums:
+        if i == stop:
+            break
+        sum_list += int(i)
+    return sum_list
 
-rating = int(input('Enter number: '))
-inserted = False
-for index, number in enumerate(rating_list):
-    if rating > number:
-        rating_list.insert(index, rating)
-        inserted = True
-        break
-
-if not inserted:
-    rating_list.append(rating)
-
-print(rating_list)
+stop_word = '!'
+finish = False
+a = 0
+while not finish:
+    user_nums = input('Enter numbers separated by a space: ')
+    a += num_func(user_nums, stop_word)
+    finish = stop_word in user_nums
+    print(f'Sum = {a}')

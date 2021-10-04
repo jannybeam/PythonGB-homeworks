@@ -1,13 +1,11 @@
-fill_the_list = input('list: ')
+def data (name, surname, year, city, email, phone):
+    print(f'{name} {surname} {year} {city} {email} {phone}')
 
-input_list = fill_the_list.split()
+n = input('Name: ')
+s = input('Surname: ')
+y = input('Year: ')
+c = input('City: ')
+e = input('Email: ')
+p = input('Phone: ')
 
-len_list = len(input_list)
-
-a = 0
-if len_list > 1:
-    while a < len_list - 1:
-        input_list[a], input_list[a + 1] = input_list[a + 1], input_list[a]
-        a += 2
-
-print(input_list)
+data(name=n, surname=s, year=y, city=c, email=e, phone=p)
