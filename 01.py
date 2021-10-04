@@ -1,7 +1,9 @@
-my_list = [22, 18.5, [1, 2, 3], {'one': 1, 'two': 2}, 'Nice Day', 12, (4, 5, 6)]
+def my_function(k_1, k_2):
+    if k_2 == 0:
+        return "Impossible"
+    else:
+        return k_1 / k_2
 
-print(my_list)
-print(type(my_list))
-
-for a in my_list:
-    print(type(a))
+k_1 = int(input('k_1: '))
+k_2 = int(input('k_2: '))
+print(my_function(k_1, k_2))

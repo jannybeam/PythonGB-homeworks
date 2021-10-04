@@ -1,9 +1,8 @@
-num_month = input('Number of month: ')
+def my_func(a, s, d):
+    sum_nums = a + s + d
+    return sum_nums - min((a, s, d))
 
-a, b, c, d = 'winter', 'spring', 'summer', 'autumn'
-
-s_list = [a, a, b, b, b, c, c, c, d, d, d, a]
-print(s_list[int(num_month) - 1])
-
-m_dict = {'1': a, '2': a, '3': b,'4': b,'5': b,'6': c,'7': c,'8': c,'9': d,'10': d,'11': d,'12': a}
-print(m_dict[num_month])
+a = int(input('a: '))
+s = int(input('s: '))
+d = int(input('d: '))
+print(my_func(a, s, d))
