@@ -1,11 +1,3 @@
-def data (name, surname, year, city, email, phone):
-    print(f'{name} {surname} {year} {city} {email} {phone}')
-
-n = input('Name: ')
-s = input('Surname: ')
-y = input('Year: ')
-c = input('City: ')
-e = input('Email: ')
-p = input('Phone: ')
-
-data(name=n, surname=s, year=y, city=c, email=e, phone=p)
+num_list = [14, 122, 47, 28, 235, 2, 11, 91, 18]
+result = [num_list[i] for i in range(1, len(num_list)) if num_list[i] > num_list[i - 1]]
+print(result)
