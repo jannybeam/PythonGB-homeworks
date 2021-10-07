@@ -1,17 +1,3 @@
-def num_func(num_str, stop):
-    nums = num_str.split(' ')
-    sum_list = 0
-    for i in nums:
-        if i == stop:
-            break
-        sum_list += int(i)
-    return sum_list
-
-stop_word = '!'
-finish = False
-a = 0
-while not finish:
-    user_nums = input('Enter numbers separated by a space: ')
-    a += num_func(user_nums, stop_word)
-    finish = stop_word in user_nums
-    print(f'Sum = {a}')
+from functools import reduce
+num_list = [c for c in range(100, 1001) if c % 2 == 0]
+print(reduce(lambda d, e: d * e, num_list))

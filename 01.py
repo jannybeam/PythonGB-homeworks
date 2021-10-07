@@ -1,9 +1,10 @@
-def my_function(k_1, k_2):
-    if k_2 == 0:
-        return "Impossible"
-    else:
-        return k_1 / k_2
+import sys
 
-k_1 = int(input('k_1: '))
-k_2 = int(input('k_2: '))
-print(my_function(k_1, k_2))
+if len(sys.argv) < 5:
+    print(f'Enter paramrters (output, rate, premium)')
+else:
+    a = float(sys.argv[1])
+    b = float(sys.argv[2])
+    c = float(sys.argv[3])
+    result = a * b * c
+    print(result)
