@@ -1,3 +1,7 @@
-num_list = [14, 122, 47, 28, 235, 2, 11, 91, 18]
-result = [num_list[i] for i in range(1, len(num_list)) if num_list[i] > num_list[i - 1]]
-print(result)
+with open('test_two.txt') as file:
+    file_lines = file.readlines()
+    s_count = 0
+    for num, line in enumerate(file_lines):
+        w_count = len(line.split())
+        s_count += 1
+        print(f'#{num + 1} - {w_count} words')
