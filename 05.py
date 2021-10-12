@@ -1,3 +1,13 @@
-from functools import reduce
-num_list = [c for c in range(100, 1001) if c % 2 == 0]
-print(reduce(lambda d, e: d * e, num_list))
+import random
+
+with open('test_five.txt', 'w') as file:
+    for _ in range(21):
+        file.write(f'{random.randint(1, 11)}')
+
+with open('test_five.txt') as file:
+    nums = file.read().split()
+    sum_nums = 0
+    for num in nums:
+        sum_nums += int(num)
+
+print(sum_nums)
