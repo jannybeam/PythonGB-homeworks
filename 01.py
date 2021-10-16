@@ -1,10 +1,18 @@
-import sys
+from time import sleep
 
-if len(sys.argv) < 5:
-    print(f'Enter paramrters (output, rate, premium)')
-else:
-    a = float(sys.argv[1])
-    b = float(sys.argv[2])
-    c = float(sys.argv[3])
-    result = a * b * c
-    print(result)
+class TrafficLight:
+    color = ('red', 'yellow', 'green')
+    timing = (4, 6, 8)
+
+    def __init__(self):
+        self.__color = 'red'
+
+    def running(self):
+        while True:
+            for a in self.color:
+                self.__color = a
+                print(self.__color)
+                sleep(self.timing[self.color.index(self.__color)])
+
+traffic_light = TrafficLight()
+traffic_light.running()
