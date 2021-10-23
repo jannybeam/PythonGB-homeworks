@@ -1,3 +1,17 @@
-num_list = [14, 122, 47, 28, 235, 2, 11, 91, 18]
-result = [num_list[i] for i in range(1, len(num_list)) if num_list[i] > num_list[i - 1]]
-print(result)
+class ZeroExeption(Exception):
+
+    def __init__(self, txt):
+        self.txt = txt
+
+def divide_nums():
+    try:
+        num_1 = int(input('num_1: '))
+        num_2 = int(input('num_2: '))
+        if num_2 == 0:
+            raise ZeroExeption('Cannot be divided by zero! Try again!')
+        else:
+            return num_1 / num_2
+    except ZeroExeption as error:
+        return error
+
+print(divide_nums())
